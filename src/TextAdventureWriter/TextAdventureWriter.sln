@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventureWriter", "TextAdventureWriter\TextAdventureWriter.csproj", "{59D50DE3-F375-4DE3-90FA-4315FD91ECE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TawLib", "TawLib\TawLib.csproj", "{8DBBAAC6-A336-4F37-851B-F4CF1064C46C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TawCommon", "TawCommon\TawCommon.csproj", "{BA17FFF3-3D99-4704-8042-60340862E873}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59D50DE3-F375-4DE3-90FA-4315FD91ECE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D50DE3-F375-4DE3-90FA-4315FD91ECE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D50DE3-F375-4DE3-90FA-4315FD91ECE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D50DE3-F375-4DE3-90FA-4315FD91ECE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DBBAAC6-A336-4F37-851B-F4CF1064C46C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DBBAAC6-A336-4F37-851B-F4CF1064C46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DBBAAC6-A336-4F37-851B-F4CF1064C46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DBBAAC6-A336-4F37-851B-F4CF1064C46C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA17FFF3-3D99-4704-8042-60340862E873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA17FFF3-3D99-4704-8042-60340862E873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA17FFF3-3D99-4704-8042-60340862E873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA17FFF3-3D99-4704-8042-60340862E873}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

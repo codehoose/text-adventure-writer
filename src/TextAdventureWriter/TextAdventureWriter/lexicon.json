@@ -1,0 +1,10 @@
+﻿{
+    "verbs": [ "go", "take", "hit" ],
+    "nouns": [ "lamp", "sword", "letter" ],
+    "directions": [
+        "north",
+        "south",
+        "east",
+        "west"
+    ]
+}
