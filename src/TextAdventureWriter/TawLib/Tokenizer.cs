@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SloanKellyGames.TawLib
 {
@@ -7,10 +6,29 @@ namespace SloanKellyGames.TawLib
     {
         public IEnumerable<IToken> Tokenize(ILexicon lexicon, string userInput)
         {
-            string[] split = userInput.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            List<IToken> list = new List<IToken>();
 
-            foreach (var s in split)
-                yield return lexicon.Match(s);
+            string buf = "";
+            int i = 0;
+            do
+            {
+                if (userInput[i] == ' ' || i == userInput.Length)
+                {
+                    list.Add(lexicon.Match(buf));
+                    buf = "";
+                    i++;
+                }
+                else
+                {
+                    buf += userInput[i++];
+                }
+            }
+            while (i < userInput.Length);
+
+            if (!string.IsNullOrWhiteSpace(buf))
+                list.Add(lexicon.Match(buf));
+
+            return list;
         }
     }
 }

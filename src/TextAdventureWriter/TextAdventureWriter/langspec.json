@@ -1,0 +1,26 @@
+﻿{
+    "phrases": [
+        {
+            "first": "verb",
+            "firstMust": "go",
+            "second": "direction",
+            "action": "Direction"
+        },
+        {
+            "first": "direction",
+            "second": "missing",
+            "action": "Direction"
+        },
+        {
+            "first": "verb",
+            "second": "missing",
+            "firstMust": "inventory",
+            "action":  "Inventory"
+        },
+        {
+            "first": "verb",
+            "second": "noun",
+            "action": "VerbNoun"
+        }
+    ]
+}

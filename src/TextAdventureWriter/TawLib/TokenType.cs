@@ -11,6 +11,11 @@
         Invalid,
 
         /// <summary>
+        /// Token has not been specified.
+        /// </summary>
+        Missing,
+
+        /// <summary>
         /// Verb.
         /// </summary>
         Verb,
@@ -19,6 +24,11 @@
         /// Noun.
         /// </summary>
         Noun,
+
+        /// <summary>
+        /// Joiner.
+        /// </summary>
+        Joiner,
 
         /// <summary>
         /// Direction.

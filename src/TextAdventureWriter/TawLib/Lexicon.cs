@@ -8,9 +8,7 @@ namespace SloanKellyGames.TawLib
 {
     public class Lexicon : ILexicon
     {
-        private readonly HashSet<string> _verbs = new HashSet<string>();
-        private readonly HashSet<string> _nouns = new HashSet<string>();
-        private readonly HashSet<string> _directions = new HashSet<string>();
+        private readonly Dictionary<TokenType, HashSet<string>> _dictionary = new Dictionary<TokenType, HashSet<string>>();
         
         public Lexicon(string dictionaryFile)
         {
@@ -20,19 +18,24 @@ namespace SloanKellyGames.TawLib
             var json = File.ReadAllText(dictionaryFile);
             var dictionary = JsonConvert.DeserializeObject<LexiconDictionary>(json);
 
-            _verbs.AddRange(dictionary.verbs);
-            _nouns.AddRange(dictionary.nouns);
-            _directions.AddRange(dictionary.directions);
+            _dictionary[TokenType.Verb] = new HashSet<string>();
+            _dictionary[TokenType.Noun] = new HashSet<string>();
+            _dictionary[TokenType.Direction] = new HashSet<string>();
+            _dictionary[TokenType.Joiner] = new HashSet<string>();
+
+            _dictionary[TokenType.Verb].AddRange(dictionary.verbs);
+            _dictionary[TokenType.Noun].AddRange(dictionary.nouns);
+            _dictionary[TokenType.Direction].AddRange(dictionary.directions);
+            _dictionary[TokenType.Joiner].AddRange(dictionary.joiners);
         }
 
         public IToken Match(string value)
         {
-            if (_directions.Contains(value))
-                return new Token(value, TokenType.Direction);
-            else if (_nouns.Contains(value))
-                return new Token(value, TokenType.Noun);
-            else if (_verbs.Contains(value))
-                return new Token(value, TokenType.Direction);
+            foreach (var kvp in _dictionary)
+            {
+                if (kvp.Value.Contains(value))
+                    return new Token(value, kvp.Key);
+            }
 
             return new Token(value, TokenType.Invalid);
         }

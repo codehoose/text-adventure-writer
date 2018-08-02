@@ -51,10 +51,21 @@
     <Compile Include="IParser.cs" />
     <Compile Include="IToken.cs" />
     <Compile Include="ITokenizer.cs" />
+    <Compile Include="LexicalAnalysis\ILexer.cs" />
+    <Compile Include="LexicalAnalysis\IPhrase.cs" />
+    <Compile Include="LexicalAnalysis\ITokenToPhraseFactory.cs" />
+    <Compile Include="LexicalAnalysis\Lexer.cs" />
+    <Compile Include="LexicalAnalysis\Phrase.cs" />
+    <Compile Include="LexicalAnalysis\TokenToPhraseFactory.cs" />
     <Compile Include="Lexicon.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\LanguagePhrase.cs" />
+    <Compile Include="Serialization\LanguageSpec.cs" />
     <Compile Include="Serialization\LexiconDictionary.cs" />
+    <Compile Include="SyntaxAnalysis\ILanguageSpecification.cs" />
+    <Compile Include="SyntaxAnalysis\LanguagePhraseExtensions.cs" />
+    <Compile Include="SyntaxAnalysis\LanguageSpecification.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="Tokenizer.cs" />
     <Compile Include="TokenType.cs" />
@@ -68,5 +79,6 @@
       <Name>TawCommon</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

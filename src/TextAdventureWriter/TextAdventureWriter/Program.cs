@@ -1,9 +1,8 @@
-﻿using SloanKellyGames.TawLib;
+﻿using SloanKellyGames.TawCommon;
+using SloanKellyGames.TawLib;
+using SloanKellyGames.TawLib.LexicalAnalysis;
+using SloanKellyGames.TawLib.SyntaxAnalysis;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TextAdventureWriter
 {
@@ -13,7 +12,12 @@ namespace TextAdventureWriter
         {
             var lexicon = new Lexicon("lexicon.json");
             var tokenizer = new Tokenizer();
-            var parser = new Parser();
+            //var parser = new Parser();
+
+            var tokenToPhraseFactory = new TokenToPhraseFactory();
+            var lexer = new Lexer(tokenToPhraseFactory);
+
+            var languageSpec = new LanguageSpecification("langspec.json");
 
             Console.Write("What now? ");
             var userInput = Console.ReadLine();
@@ -21,9 +25,22 @@ namespace TextAdventureWriter
             while (!string.IsNullOrWhiteSpace(userInput))
             {
                 var tokens = tokenizer.Tokenize(lexicon, userInput);
-                var action = parser.Parse(tokens);
+                var phrases = lexer.Parse(tokens);
 
-                action?.Run();
+                bool isValid = true;
+
+                phrases.Action(phrase => isValid &= languageSpec.IsValidPhrase(phrase));
+
+                if (!isValid)
+                {
+                    Console.WriteLine($"I don't know what you mean by '{userInput}'");
+                }
+                else
+                {
+                    // TODO: Convert each phrase to an action
+                    //       Run each item, if one fails STOP execution
+                    //action?.Run();
+                }
 
                 Console.Write("What now? ");
                 userInput = Console.ReadLine();

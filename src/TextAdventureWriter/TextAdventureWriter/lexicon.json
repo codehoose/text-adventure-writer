@@ -1,10 +1,13 @@
 ﻿{
-    "verbs": [ "go", "take", "hit" ],
+    "verbs": [ "go", "take", "hit", "inventory" ],
     "nouns": [ "lamp", "sword", "letter" ],
     "directions": [
         "north",
         "south",
-        "east",
+        "east", 
         "west"
+    ],
+    "joiners": [
+        "and", "then", ","
     ]
 }

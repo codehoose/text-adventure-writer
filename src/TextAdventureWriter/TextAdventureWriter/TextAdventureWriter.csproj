@@ -47,11 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="langspec.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="lexicon.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TawCommon\TawCommon.csproj">
+      <Project>{BA17FFF3-3D99-4704-8042-60340862E873}</Project>
+      <Name>TawCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TawLib\TawLib.csproj">
       <Project>{8dbbaac6-a336-4f37-851b-f4cf1064c46c}</Project>
       <Name>TawLib</Name>

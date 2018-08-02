@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SloanKellyGames.TawLib
+namespace SloanKellyGames.TawLib.SyntaxAnalysis
 {
-    public interface IAction
+    public interface ILanguageSpecification
     {
-        bool Run();
     }
 }

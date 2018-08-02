@@ -11,9 +11,10 @@ namespace SloanKellyGames.TawLib.Actions
             _direction = direction;
         }
 
-        public void Run()
+        public bool Run()
         {
             Console.WriteLine($"You go {_direction}.");
+            return true;
         }
     }
 }
