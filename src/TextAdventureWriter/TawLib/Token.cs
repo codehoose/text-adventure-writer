@@ -1,4 +1,6 @@
-﻿namespace SloanKellyGames.TawLib
+﻿using SloanKellyGames.TawCommon.Framework;
+
+namespace SloanKellyGames.TawLib
 {
     public sealed class Token : IToken
     {

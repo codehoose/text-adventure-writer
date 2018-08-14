@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SloanKellyGames.TawLib.SyntaxAnalysis
+namespace SloanKellyGames.TawCommon.Framework
 {
     public interface ILanguageSpecification
     {

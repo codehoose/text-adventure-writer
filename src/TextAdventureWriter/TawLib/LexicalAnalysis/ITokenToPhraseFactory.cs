@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using SloanKellyGames.TawCommon.Framework;
+using System.Collections.Generic;
 
 namespace SloanKellyGames.TawLib.LexicalAnalysis
 {

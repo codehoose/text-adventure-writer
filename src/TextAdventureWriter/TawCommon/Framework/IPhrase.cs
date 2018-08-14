@@ -1,4 +1,4 @@
-﻿namespace SloanKellyGames.TawLib.LexicalAnalysis
+﻿namespace SloanKellyGames.TawCommon.Framework
 {
     public interface IPhrase
     {

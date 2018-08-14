@@ -1,4 +1,6 @@
-﻿namespace SloanKellyGames.TawLib.LexicalAnalysis
+﻿using SloanKellyGames.TawCommon.Framework;
+
+namespace SloanKellyGames.TawLib.LexicalAnalysis
 {
     public sealed class Phrase : IPhrase
     {

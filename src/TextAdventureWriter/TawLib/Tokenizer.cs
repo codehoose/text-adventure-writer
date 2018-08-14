@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using SloanKellyGames.TawCommon.Framework;
+using System.Collections.Generic;
+using System.ComponentModel.Composition;
 
 namespace SloanKellyGames.TawLib
 {
+    [Export(typeof(ITokenizer))]
     public sealed class Tokenizer : ITokenizer
     {
         public IEnumerable<IToken> Tokenize(ILexicon lexicon, string userInput)

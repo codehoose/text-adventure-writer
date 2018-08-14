@@ -1,16 +1,22 @@
 ﻿using Newtonsoft.Json;
-using SloanKellyGames.TawLib.LexicalAnalysis;
+using SloanKellyGames.TawCommon.Framework;
+using SloanKellyGames.TawCommon.System;
 using SloanKellyGames.TawLib.Serialization;
+using System.ComponentModel.Composition;
 using System.IO;
 
 namespace SloanKellyGames.TawLib.SyntaxAnalysis
 {
+    [Export(typeof(ILanguageSpecification))]
     public class LanguageSpecification : ILanguageSpecification
     {
         private readonly LanguageSpec _langSpec;
 
-        public LanguageSpecification(string languageSpecFile)
+        [ImportingConstructor]
+        public LanguageSpecification(ILaunchSettingsProvider _launchSettingsProvider)
         {
+            var languageSpecFile = _launchSettingsProvider.LaunchSettings.LanguageSpec;
+
             if (!File.Exists(languageSpecFile))
                 throw new FileNotFoundException();
 

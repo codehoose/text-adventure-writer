@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SloanKellyGames.TawCommon.Framework;
+using System;
 
 namespace SloanKellyGames.TawLib.Serialization
 {
@@ -6,8 +7,11 @@ namespace SloanKellyGames.TawLib.Serialization
     internal sealed class LanguagePhrase
     {
         public TokenType first;
+
         public string firstMust;
+
         public TokenType second;
+
         public string action;
     }
 }

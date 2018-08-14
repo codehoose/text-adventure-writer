@@ -1,4 +1,5 @@
-﻿using SloanKellyGames.TawLib.LexicalAnalysis;
+﻿using SloanKellyGames.TawCommon.Framework;
+using SloanKellyGames.TawLib.LexicalAnalysis;
 using SloanKellyGames.TawLib.Serialization;
 using System;
 

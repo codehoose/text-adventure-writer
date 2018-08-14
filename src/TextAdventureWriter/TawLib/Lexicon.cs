@@ -1,17 +1,24 @@
 ﻿using Newtonsoft.Json;
 using SloanKellyGames.TawCommon;
+using SloanKellyGames.TawCommon.Framework;
+using SloanKellyGames.TawCommon.System;
 using SloanKellyGames.TawLib.Serialization;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.IO;
 
 namespace SloanKellyGames.TawLib
 {
+    [Export(typeof(ILexicon))]
     public class Lexicon : ILexicon
     {
         private readonly Dictionary<TokenType, HashSet<string>> _dictionary = new Dictionary<TokenType, HashSet<string>>();
         
-        public Lexicon(string dictionaryFile)
+        [ImportingConstructor]
+        public Lexicon(ILaunchSettingsProvider launchSettingsProvider)
         {
+            var dictionaryFile = launchSettingsProvider.LaunchSettings.Lexicon;
+
             if (!File.Exists(dictionaryFile))
                 return;
 

@@ -1,4 +1,4 @@
-﻿namespace SloanKellyGames.TawLib
+﻿namespace SloanKellyGames.TawCommon.Framework
 {
     public interface IToken
     {

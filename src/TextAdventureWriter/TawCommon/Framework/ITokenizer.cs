@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SloanKellyGames.TawLib
+namespace SloanKellyGames.TawCommon.Framework
 {
     public interface ITokenizer
     {

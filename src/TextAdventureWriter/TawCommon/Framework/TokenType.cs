@@ -1,4 +1,4 @@
-﻿namespace SloanKellyGames.TawLib
+﻿namespace SloanKellyGames.TawCommon.Framework
 {
     /// <summary>
     /// Token type.

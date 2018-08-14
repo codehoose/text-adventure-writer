@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using SloanKellyGames.TawCommon.Framework;
+using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 
 namespace SloanKellyGames.TawLib.LexicalAnalysis
 {
+    [Export(typeof(ITokenToPhraseFactory))]
     public class TokenToPhraseFactory : ITokenToPhraseFactory
     {
         public IPhrase Create(IEnumerable<IToken> tokenStream)

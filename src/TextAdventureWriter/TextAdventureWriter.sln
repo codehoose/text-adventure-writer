@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TawLib", "TawLib\TawLib.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TawCommon", "TawCommon\TawCommon.csproj", "{BA17FFF3-3D99-4704-8042-60340862E873}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TawLauncher", "TawLauncher\TawLauncher.csproj", "{B8DF7751-BDBD-4288-9B35-7220666CF177}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BA17FFF3-3D99-4704-8042-60340862E873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA17FFF3-3D99-4704-8042-60340862E873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA17FFF3-3D99-4704-8042-60340862E873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8DF7751-BDBD-4288-9B35-7220666CF177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8DF7751-BDBD-4288-9B35-7220666CF177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8DF7751-BDBD-4288-9B35-7220666CF177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8DF7751-BDBD-4288-9B35-7220666CF177}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
