@@ -1,5 +1,4 @@
-﻿using SloanKellyGames.TawCommon.Framework;
-using System;
+﻿using SloanKellyGames.TawCommon.System;
 
 namespace TawLauncher
 {
@@ -7,17 +6,15 @@ namespace TawLauncher
     {
         public void Init()
         {
+            // Create the composition container
             var compositionContainer = new TawCompositionContainer();
 
-            var lexicon = compositionContainer.GetExportedValue<ILexicon>();
-            var lexer = compositionContainer.GetExportedValue<ILexer>();
-            var languageSpec = compositionContainer.GetExportedValue<ILanguageSpecification>();
-            var tokenizer = compositionContainer.GetExportedValue<ITokenizer>();
+            // Get the settings provider because that has the entry point
+            var settingsProvider = compositionContainer.GetExportedValue<ILaunchSettingsProvider>();
 
-            Console.Write("What now? ");
-            var userInput = Console.ReadLine();
-
-
+            // Try to launch the bootstrapper process
+            // TODO: Need to capture any errors from not finding a bootstrapper
+            var bootstrapper = compositionContainer.GetExportedValue<IBootstrap>(settingsProvider.LaunchSettings.EntryPoint);
         }
     }
 }

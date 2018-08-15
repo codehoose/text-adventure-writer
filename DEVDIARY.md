@@ -23,3 +23,11 @@ Or even:
 All of which would take the lamp and try and head north. Once I'd gotten the tokenizer started, it's still got a long way to go because it only recognizes joiner words, not ampersands and the like, I felt like I should do some phrase analysis and finally some syntax checks. So that's what I did :)
 
 The language spec such as it is, is now in a JSON file. This file is read in and the phrases can be validated. Anything that isn't recognized puts up a "I don't know what you mean by..." and what you typed. For tonight, deafening silence greets you when you enter a valid phrase.
+
+# 2018-08-13 Composition
+_Time Spent: 2.5hrs_
+Added MEF composition. Well, started to anyway.
+
+# 2018-08-14 Composition again
+_Time Spent: 2hrs_
+Trying to split the editor and runtime out to two separate DLLs. Partially working. The editor window starts up, there's nothing in it, and the console starts but nothing is visible. I'm calling tonight a fail tbh.

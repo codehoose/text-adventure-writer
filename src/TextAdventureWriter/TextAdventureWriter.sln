@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TawCommon", "TawCommon\TawC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TawLauncher", "TawLauncher\TawLauncher.csproj", "{B8DF7751-BDBD-4288-9B35-7220666CF177}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TawRuntime", "TawRuntime\TawRuntime.csproj", "{371E21B6-C74E-40A6-9FC0-1DB49C890CAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TawEditorLib", "TawEditorLib\TawEditorLib.csproj", "{4E327E53-AFBE-434D-BB38-588D80DAF07B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B8DF7751-BDBD-4288-9B35-7220666CF177}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8DF7751-BDBD-4288-9B35-7220666CF177}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8DF7751-BDBD-4288-9B35-7220666CF177}.Release|Any CPU.Build.0 = Release|Any CPU
+		{371E21B6-C74E-40A6-9FC0-1DB49C890CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371E21B6-C74E-40A6-9FC0-1DB49C890CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371E21B6-C74E-40A6-9FC0-1DB49C890CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371E21B6-C74E-40A6-9FC0-1DB49C890CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E327E53-AFBE-434D-BB38-588D80DAF07B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E327E53-AFBE-434D-BB38-588D80DAF07B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E327E53-AFBE-434D-BB38-588D80DAF07B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E327E53-AFBE-434D-BB38-588D80DAF07B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

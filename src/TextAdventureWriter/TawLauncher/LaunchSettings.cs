@@ -8,10 +8,13 @@ namespace TawLauncher
 
         public string Lexicon { get; }
 
-        public LaunchSettings(string languageSpec, string lexicon)
+        public string EntryPoint { get; }
+
+        public LaunchSettings(string languageSpec, string lexicon, string entryPoint)
         {
             LanguageSpec = languageSpec;
             Lexicon = lexicon;
+            EntryPoint = entryPoint;
         }
     }
 }

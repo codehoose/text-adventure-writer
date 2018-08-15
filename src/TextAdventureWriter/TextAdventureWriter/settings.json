@@ -1,4 +1,5 @@
 ﻿{
     "languageSpec": "langspec.json",
-    "lexicon": "lexicon.json"
+    "lexicon": "lexicon.json",
+    "entryPoint": "Editor"
 }

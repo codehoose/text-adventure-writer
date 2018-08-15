@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SloanKellyGames.TawCommon;
 using SloanKellyGames.TawCommon.System;
 using System.ComponentModel.Composition;
 using System.IO;
@@ -16,7 +17,7 @@ namespace TawLauncher
         {
             if (!File.Exists("settings.json"))
             {
-                _launchSettings = new LaunchSettings("langspec.json", "lexicon.json");
+                _launchSettings = new LaunchSettings("langspec.json", "lexicon.json", Bootstrappers.Runtime);
                 return;
             }
 
